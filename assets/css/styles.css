@@ -19,9 +19,8 @@
     --radius-panel: 14px;
     --radius-chip: 999px;
 
-    /* Single font everywhere */
-    --font-display: "Source Serif 4", serif;
-    --font-ui: "Source Serif 4", serif;
+    --font-display: "Optima", "Source Serif 4", serif;
+    --font-ui: "Optima", "Source Serif 4", serif;
     --font-body: "Source Serif 4", serif;
 }
 
@@ -43,12 +42,43 @@ body {
     min-height: 100vh;
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.55;
     background: #1f3b2a; /* dark forest green */
     background-size: cover;
     background-attachment: fixed;
     color: var(--text-main);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* ---------- HEADINGS IN OPTIMA ---------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+    text-transform: none;
+    line-height: 1.2;
+    margin-top: 0; /* let specific contexts add margins */
+}
+
+/* Primary bold headings */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+/* Secondary headings slightly lighter if needed later */
+h4,
+h5,
+h6 {
+    font-weight: 600;
 }
 
 /* Links */
@@ -85,7 +115,7 @@ a:hover {
     font-size: 1.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .site-tagline {
@@ -142,7 +172,7 @@ a:hover {
 
 /* Optional: tighter reading column for essays inside panels */
 .page-content {
-    max-width: 720px;
+    max-width: 740px;
     margin: 0 auto;
 }
 
@@ -164,7 +194,7 @@ a:hover {
 .hero-title {
     font-family: var(--font-display);
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0.4rem 0;
 }
 
@@ -210,7 +240,7 @@ a:hover {
 .issue-title {
     font-family: var(--font-display);
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0.1rem 0;
 }
 
@@ -224,7 +254,7 @@ a:hover {
 .page-title {
     font-family: var(--font-display);
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 0.3rem;
     margin-bottom: 0.8rem;
 }
@@ -236,8 +266,22 @@ a:hover {
 }
 
 .page-content p {
-    line-height: 1.4;
-    margin: 0.7rem 0;
+    line-height: 1.55;
+    margin: 0.95rem 0;
+}
+
+/* Essay subheads inside content */
+
+.page-content h2 {
+    letter-spacing: 0.02em;
+    margin-top: 2.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.page-content h3 {
+    letter-spacing: 0.02em;
+    margin-top: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Field guide cards */
@@ -270,7 +314,7 @@ a:hover {
 .fg-title {
     font-family: var(--font-display);
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0.3rem 0;
 }
 
@@ -282,7 +326,7 @@ a:hover {
 /* Figures */
 
 figcaption {
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* ---------- ISSUE HERO IMAGE ---------- */
@@ -470,12 +514,12 @@ figcaption {
 
     /* Slightly looser line-height on very small screens */
     body {
-        line-height: 1.45;
+        line-height: 1.6;
     }
 
     .page-content p,
     figcaption {
-        line-height: 1.45;
+        line-height: 1.6;
     }
 }
 
