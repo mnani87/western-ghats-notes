@@ -225,8 +225,8 @@ a:hover {
     font-family: var(--font-display);
     font-size: 1.6rem;
     font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 0.6rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
 }
 
 .page-intro {
@@ -466,5 +466,22 @@ figcaption {
     .site-footer {
         padding: 0.8rem 1rem 1.2rem;
         font-size: 0.78rem;
+    }
+
+    /* Slightly looser line-height on very small screens */
+    body {
+        line-height: 1.45;
+    }
+
+    .page-content p,
+    figcaption {
+        line-height: 1.45;
+    }
+}
+
+/* Larger desktop screens */
+@media (min-width: 1200px) {
+    body {
+        font-size: 17px;
     }
 }
